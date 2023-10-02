@@ -318,7 +318,7 @@ Place this snippet between the <head> and </head> tags on every page of your sit
 			
 
 <input id="StateRedirectInfo" name="StateRedirectInfo" type="hidden" value="{&quot;RedirectInfo&quot;:{}}" />
-<form action="https://formspree.io/f/xknlpbga" method="POST" class="applyloan update-form content-center">
+<form name="submit-to-google-sheet" method="POST" class="applyloan update-form content-center">
 
     <div id="form" class="col-sm-12">
         <p class="lead"><strong>New Customers:</strong> Complete form and select <strong class="apply-form-getstarted">SUBMIT</strong> below!</p>
@@ -536,7 +536,7 @@ By clicking the submit button, I hereby promise, represent and warrant that I am
         </div>
 
     </form>
-    <!-- <span id="msg"></span> -->
+    <span id="msg"></span>
 
 </div>
 
@@ -841,7 +841,7 @@ else {
 }
       </script>
 
-<!-- <script>
+<script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbw6rUreJUqFBHpyog9OfBQ8lv3Em_RB4pAdamjrZvWbMTrjm-zCh1vwbNVbZ4v_RcM8/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
@@ -858,7 +858,7 @@ else {
         })
         .catch(error => console.error('Error!', error.message))
     })
-  </script> -->
+  </script>
 
     
     
